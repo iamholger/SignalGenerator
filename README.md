@@ -5,4 +5,5 @@ Signal generator for non-discrete oscillation problem
 AppEval
 
 # Compilation of library
-g++ -O3 -fopenmp -shared -fPIC  -march=native -mtune=native  -DNDEBUG  -std=c++17  -g -IEigen3.3.7 -IAppEval -Iinclude/SignalGenerator -lAppEval -o libSignalGenerator.so src/SignalGenerator.cxx
+g++ -O3 -fopenmp -shared -fPIC  -march=native -mtune=native  -DNDEBUG  -std=c++17  -g -I/usr/include/eigen3 -I../AppEval/include/AppEval -Iinclude/SignalGenerator -L../AppEval/lib -lAppEval -o lib/libSignalGenerator.so src/SignalGenerator.cxx
+
